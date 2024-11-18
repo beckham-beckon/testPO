@@ -27,7 +27,7 @@ func Explore(x int, y int) {
 	ExploreQ.Enqueue(c.Coord{X: x, Y: y})
 
 	for len(ExploreQ.Coords) > 0 {
-		log.Printf("Length of ExploreQ: %v", len(ExploreQ.Coords))
+		log.Printf("Length of ExploreQ CANDY: %v", len(ExploreQ.Coords))
 		coord := ExploreQ.Dequeue()
 		i, j := coord.X, coord.Y
 		// Boundary Conditions
@@ -59,5 +59,4 @@ func CheckComplete() bool {
 	if CellsExplored == totalCells-common.Mines {
 		return true
 	}
-	return false
 }
