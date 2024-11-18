@@ -59,5 +59,4 @@ func CheckComplete() bool {
 	if CellsExplored == totalCells-common.Mines {
 		return true
 	}
-	return false
 }
