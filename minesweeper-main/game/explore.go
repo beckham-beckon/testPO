@@ -31,10 +31,10 @@ func Explore(x int, y int) {
 		coord := ExploreQ.Dequeue()
 		i, j := coord.X, coord.Y
 		// Boundary Conditions
-		if i >= c.Length || j >= c.Breadth || i < 0 || j < 0 {
-			continue
-		}
+		//removing this If statement key logic
+
 		// Check if its anything else other than empty cell.
+		//Adding a new comment line for Panto to check.
 		if Unexplored[i][j] != 10 {
 			continue
 		}
@@ -59,5 +59,5 @@ func CheckComplete() bool {
 	if CellsExplored == totalCells-common.Mines {
 		return true
 	}
-	return false
+//removed the return staement here.
 }
